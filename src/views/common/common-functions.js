@@ -17,7 +17,7 @@ export const requestBookList = async (
 ) => {
   try {
     let url =
-      "http://openlibrary.org/search.json?title=" +
+      "https://openlibrary.org/search.json?title=" +
       title +
       "&fields=title,author_name,isbn,publish_date,first_publish_year&page=" +
       page +
