@@ -1,8 +1,20 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { render, screen, fireEvent } from "@testing-library/react";
+import App from "./App";
 
-test('renders learn react link', () => {
+test("render required elements and functions", () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+
+  //test webpage display of book search input, button
+  expect(screen.getByText("Welcome to Book Search")).toBeInTheDocument();
+  expect(screen.getByTestId("book-title-search-input")).toBeInTheDocument();
+  expect(screen.getByTestId("book-title-search-btn")).toBeInTheDocument();
+
+  //test book search button onClick callback function
+  const mockFn = jest.fn();
+  screen.getByTestId("book-title-search-btn").onclick = mockFn;
+  fireEvent.change(screen.getByTestId("book-title-search-input"), {
+    target: { value: "Test Title" },
+  });
+  fireEvent.click(screen.getByTestId("book-title-search-btn"));
+  expect(mockFn.mock.calls.length).toBe(1);
 });

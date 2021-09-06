@@ -41,11 +41,13 @@ function BookSearch(props) {
           value={searchTitle}
           onChange={handleInputChange}
           onKeyUp={handleKeyUpEnter}
+          data-testid="book-title-search-input"
         />
         <button
           className="search-btn"
           type="button"
           onClick={handleSearchClick}
+          data-testid="book-title-search-btn"
         >
           Search
         </button>
