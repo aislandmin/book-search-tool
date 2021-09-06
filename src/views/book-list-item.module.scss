@@ -1,0 +1,48 @@
+@mixin text-show-limit($lineNumber) {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $lineNumber;
+  -webkit-box-orient: vertical;
+}
+
+.list-item-container {
+  margin: 10px 0;
+  padding: 20px;
+  height: 280px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+
+  display: flex;
+  align-items: center;
+
+  :global {
+    .book-cover {
+      text-align: center;
+      vertical-align: middle;
+      width: 20%;
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+    .book-info {
+      width: 70%;
+      padding: 0 18px;
+      .book-info-title {
+        margin-top: 0;
+        font-size: 26px;
+        color: #005fc0;
+        @include text-show-limit(1);
+      }
+      .book-info-author {
+        @include text-show-limit(1);
+      }
+      .book-info-publish-date {
+        @include text-show-limit(2);
+      }
+    }
+  }
+}
