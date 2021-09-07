@@ -41,6 +41,7 @@ function BookSearch(props) {
           value={searchTitle}
           onChange={handleInputChange}
           onKeyUp={handleKeyUpEnter}
+          aria-labelledby="input book title to search"
           data-testid="book-title-search-input"
         />
         <button
