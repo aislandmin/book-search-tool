@@ -22,9 +22,11 @@ No UI library used.
 
 **src->views**: three **components** to build webpage:
 
-    * book-search: input book title. trigger search. trigger search action by button click and enter key press on the keyboard.
-    * book-list: display search result as a paginated list with ten records per page. sort by title alphabetically, more recently published. 
-    * book-list-item: single book record. each book display information of title, book cover, author, published date.
+    **book-search**: input book title. trigger search. trigger search action by button click and enter key press on the keyboard.
+
+    **book-list**: display search result as a paginated list with ten records per page. sort by title alphabetically, more recently published. 
+
+    **book-list-item**: single book record. each book display information of title, book cover, author, published date.
 
 **src->views->common**: common functions and constants for components to use.
 
