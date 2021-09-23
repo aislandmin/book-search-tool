@@ -1,6 +1,6 @@
 # Task Report
 
-Front-End Interview Test – Build a Book Search Tool
+Build a Book Search Tool
 
 ## Complete all task requirements
 
